@@ -1,0 +1,44 @@
+Server	smtp.sendgrid.net
+Ports	
+25, 587	(for unencrypted/TLS connections)
+465	(for SSL connections)
+Username	apikey
+Password	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
+
+String host = "smtp.mail.yahoo.com";  
+		  final String user = "testingaccount.utmsdigitalway@yahoo.com";
+		  final String password = "lrza"
+		  		+ "xdqs"
+		  		+ "tlrj"
+		  		+ "hksk";
+		  final int port = 587;//change accordingly  
+		    
+		  String to="testingaccount.utmsdigitalway@yahoo.com";//change accordingly  
+		  
+		   //Get the session object  
+		   Properties props = new Properties();  
+		   props.put("mail.smtp.host",host);  
+		   props.put("mail.smtp.port",port);
+		   props.put("mail.smtp.starttls.enable", "true");
+		   props.put("mail.smtp.auth", "true");  
+--setup email 465 is SSL , 587 IS NOT SSL
+
+YAHOO
+ahoo.com (Yahoo! Mail) SMTP Server	smtp.mail.yahoo.com
+SMTP port	465//587
+SMTP security	SSL / TLS
+SMTP username	Your full email address
+SMTP password	Your Yahoo.com password
+
+Enable SSL: True
+
+yahoo email:
+
+testingaccount.utmsdigitalway@yahoo.com
+
+yahoo password
+culcwtdatzpoilxa
+lrza
+xdqs
+tlrj
+hksk

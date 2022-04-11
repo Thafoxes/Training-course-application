@@ -1,0 +1,68 @@
+<error-page>
+  	<error-code>500</error-code>
+    <location>/error500.jsp</location>
+  </error-page>
+  <error-page>
+        <location>/error404.jsp</location>
+  </error-page>
+  
+  
+  
+  search for the page and redirect it
+  request.getRequestDispatcher("login.jsp").forward(request, response);
+  
+  open request session
+  HttpSession session = request.getSession();
+if the session of the user is empty  
+if((session.getAttribute("user")!= null)) {
+}
+
+
+//if u want to show error key, use this
+	response.setContentType("text/html"); 
+	String htmlResponse = "<h2>You have not login!</h2>";
+	PrintWriter out = response.getWriter();
+	out.print(htmlResponse);
+	
+	
+//			successfully enter
+//				String htmlResponse = "<h1>Welcome "+ e.getUsername() +"</h1>"
+//									+ "<h2>You have login!</h2>";
+//				PrintWriter writer = response.getWriter();
+//				writer.write(htmlResponse);
+
+register attribute
+//request.setAttribute("user", userAccount);
+
+//redirect back to page
+request.getRequestDispatcher("index.jsp").include(request, response);
+
+
+String htmlResponse = "<h1>Welcome "+ userAccount.get(0).getUsername() +"</h1>"
+									+ "<h2>You have login!</h2>";
+				PrintWriter writer = response.getWriter();
+				writer.write(htmlResponse);
+
+
+				
+//get session attribute
+request.getSession(false).getAttribute("name")!= null				
+				
+// open for session shit
+HttpSession session = request.getSession();
+			
+//request = temporary
+request.setAttribute
+
+//session = permanent in login
+session.setAttribute
+
+
+//set as session
+HttpSession session = request.getSession();
+session.setAttribute("user", userAccount);
+
+
+
+//array jstl without loop
+<c:out value="${user.get(0).userID}"></c:out>
